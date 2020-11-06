@@ -2001,77 +2001,22 @@ input[type="email"]::-webkit-input-placeholder {
   opacity: 0.8;
 }
 
+@media only screen and (max-width: 767px) {
+  textarea,
+  input[type="url"],
+  input[type="search"],
+  input[type="number"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="email"] {
+    font-size: 18px;
+  }
+}
+
 textarea {
   overflow: auto;
   resize: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-@-webkit-keyframes pulsemy {
-  from {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-  }
-  to {
-    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 8px 50px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-            box-shadow: rgba(0, 0, 0, 0) 0 0 8px 50px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-  }
-}
-
-@keyframes pulsemy {
-  from {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-  }
-  to {
-    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 8px 50px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-            box-shadow: rgba(0, 0, 0, 0) 0 0 8px 50px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-  }
-}
-
-@-webkit-keyframes pulsemy-hover {
-  from {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-            box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-  }
-  to {
-    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 8px 80px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-            box-shadow: rgba(0, 0, 0, 0) 0 0 8px 80px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-  }
-}
-
-@keyframes pulsemy-hover {
-  from {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-            box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0, rgba(0, 0, 0, 0) 0 0 8px 35px;
-  }
-  to {
-    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 8px 80px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-            box-shadow: rgba(0, 0, 0, 0) 0 0 8px 80px, rgba(0, 0, 0, 0.1) 0 0 4px 0;
-  }
-}
-
-@-webkit-keyframes pulsemy-none {
-  from {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0;
-            box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0;
-  }
-  to {
-    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 0;
-            box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 0;
-  }
-}
-
-@keyframes pulsemy-none {
-  from {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0;
-            box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0;
-  }
-  to {
-    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 0;
-            box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 0;
-  }
 }
 
 img {
@@ -2091,6 +2036,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 0 white inset !important;
+  box-shadow: 0 0 0 0 white inset !important;
 }
 
 input:-webkit-autofill {
@@ -2127,6 +2073,14 @@ input:invalid {
           box-shadow: none;
 }
 
+/* body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: red;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: green;
+} */
 .button,
 a.button {
   -webkit-appearance: none;
