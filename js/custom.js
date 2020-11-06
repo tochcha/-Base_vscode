@@ -8,6 +8,69 @@ document.addEventListener("DOMContentLoaded", function () {
 	body.classList.remove("loading");
 });
 
+// открыть/закрыть по клику
+const btnOpenClose = document.querySelector('#button_open_close');
+const buttonContent = document.querySelector('#button_content');
+if (buttonContent && btnOpenClose) {
+	btnOpenClose.addEventListener("click", btnClick);
+	function btnClick() {
+		if (buttonContent.classList.contains("content_visible")) {
+			btnOpenClose.textContent = "Открыть блок";
+		} else {
+			btnOpenClose.textContent = "Скрыть блок";		
+		};
+		buttonContent.classList.toggle("content_visible");
+	};
+}
+// открыть/закрыть по клику end
+
+// аккордеон меню
+const tochchaAccoMenuLink = document.querySelectorAll(".acco_list > li > a");
+tochchaAccoMenuLink.forEach(function(itemMenu) {
+	itemMenu.addEventListener("click", toggleMenuAcco);
+});
+function toggleMenuAcco() {
+	const parentAccoMenu = this.closest('.acco_list > li');
+	parentAccoMenu.classList.toggle('accomenu_visible');
+	/* раскомментировать, если хотим, чтобы по клику на один закрывался другой */
+	const parentMenuActive = this.closest('.accomenu_visible');
+	document.querySelectorAll(".accomenu_visible").forEach(function(accomenu_selector){
+		accomenu_selector.classList.remove("accomenu_visible");
+	});
+	if (parentMenuActive) {
+		parentMenuActive.classList.toggle('accomenu_visible');
+	}
+}
+const tochchaAccoMenuLinkNone = document.querySelectorAll(".acco_list > li > a[href^='#']");
+tochchaAccoMenuLinkNone.forEach(function(itemMenuNolink) {
+	itemMenuNolink.addEventListener("click", noLink);
+});
+function noLink(e) {
+   e.preventDefault();
+};
+// аккордеон меню end
+
+// аккордеон просто (спойлер)
+const tochchaHeaders = document.querySelectorAll("[data-title-acco]");
+tochchaHeaders.forEach(function(item) {
+	item.addEventListener("click", toggleAcco);
+});
+function toggleAcco() {
+	const parent = this.closest('.tochchaacco__item');
+	if (parent) {
+		parent.classList.toggle('acco_visible');
+	}
+	/* раскомментировать, если хотим, чтобы по клику на один закрывался другой */
+	/* const parentActive = this.closest('.tochchaacco__item.acco_visible');
+	document.querySelectorAll("[data-accocontent]").forEach(function(acco_selector){
+		acco_selector.classList.remove("acco_visible");
+	});
+	if (parentActive) {
+		parentActive.classList.toggle('acco_visible');
+	} */
+}
+// аккордеон просто (спойлер) end
+
 // табы
 const tabsHeaders = document.querySelectorAll("[data-tab]");
 tabsHeaders.forEach(tabsHandler);
@@ -65,7 +128,8 @@ $('.uni-overlay').click(function () {
 	$('.mainnav').removeClass('is-active');
 });
 
-// кастомный скролл
+// кастомный скроллбар описание: http://manos.malihu.gr/jquery-custom-content-scroller/
+// кастомный скроллбар демо (theme): http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
 if ($('.scrollY').length) {
 	$(".scrollY").mCustomScrollbar({
 		axis: "y",
@@ -87,3 +151,4 @@ if ($('.scrollX').length) {
 		scrollButtons: { enable: true, scrollType: "stepless" }
 	});
 };
+

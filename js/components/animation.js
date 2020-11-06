@@ -1,0 +1,3 @@
+var animItems=document.querySelectorAll(".anim_items");
+if(0<animItems.length){var offset=function(a){a=a.getBoundingClientRect();return{top:a.top+(window.pageYOffset||document.documentElement.scrollTop),left:a.left+(window.pageXOffset||document.documentElement.scrollLeft)}},animOnScroll=function(){for(var a=0;a<animItems.length;a++){var b=animItems[a],c=b.offsetHeight,d=offset(b).top,e=window.innerHeight-c/4;c>window.innerHeight&&(e=window.innerHeight-window.innerHeight/4);pageYOffset>d-e&&pageYOffset<d+c?b.classList.add("go_anim"):b.classList.contains("anim_no_hide")||
+b.classList.remove("go_anim")}};window.addEventListener("scroll",animOnScroll);setTimeout(function(){animOnScroll()},300)};
