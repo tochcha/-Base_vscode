@@ -1,0 +1,119 @@
+/*
+100 - thin
+200 - extralight
+300 - light
+400 - normal
+500 - medium
+600 - semibold
+700 - bold
+800 - extrabold
+900 - black
+lighter - Изменяет начертание относительно насыщенности родительского элемента (сверхтонкое начертание).
+bolder - Изменяет начертание относительно насыщенности родителя элемента (сверхжирное начертание).
+*/
+
+@font-face {
+    font-display: swap;
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNovaT-Thin.eot');
+    src: url('../fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNovaT-Thin.woff') format('woff'),
+    url('../fonts/ProximaNovaT-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova-RegularIt.eot');
+    src: url('../fonts/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-RegularIt.woff') format('woff'),
+    url('../fonts/ProximaNova-RegularIt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova-Semibold.eot');
+    src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('../fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Bold.woff') format('woff'),
+    url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'BookAntiqua';
+    src: url('../fonts/BookAntReg.eot');
+    src: url('../fonts/BookAntReg.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BookAntReg.woff2') format('woff2');
+    src: url('../fonts/BookAntiqua.svg#BookAntiqua') format('svg'),
+    url('../fonts/BookAntiqua.ttf') format('truetype'),
+    url('../fonts/BookAntiqua.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'BookAntiqua';
+    src: url('../fonts/BookAntRegIt.eot');
+    src: url('../fonts/BookAntRegIt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BookAntRegIt.woff2') format('woff2');
+    src: url('../fonts/BookAntiqua-Italic.svg#BookAntiqua-Italic') format('svg'),
+    url('../fonts/BookAntiqua-Italic.ttf') format('truetype'),
+    url('../fonts/BookAntiqua-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'BookAntiqua';
+    src: url('../fonts/BookAntBold.eot');
+    src: url('../fonts/BookAntBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BookAntBold.woff2') format('woff2');
+    src: url('../fonts/BookAntiqua-Bold.svg#BookAntiqua-Bold') format('svg'),
+    url('../fonts/BookAntiqua-Bold.ttf') format('truetype'),
+    url('../fonts/BookAntiqua-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'BookAntiqua';
+    src: url('../fonts/BookAntBoldIt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BookAntBoldIt.woff2') format('woff2');
+    src: url('../fonts/BookAntiqua-BoldItalic.svg#BookAntiqua-BoldItalic') format('svg'),
+    url('../fonts/BookAntiqua-BoldItalic.ttf') format('truetype'),
+    url('../fonts/BookAntiqua-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
